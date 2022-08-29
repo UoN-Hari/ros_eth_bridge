@@ -1,0 +1,3 @@
+<launch>
+    <node name="MCU" pkg="ethernet" type="main.py" output="screen"/>
+</launch>
