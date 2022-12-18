@@ -13,4 +13,4 @@ class Listener:
         rospy.loginfo(rospy.get_caller_id() + "\nReceived ROS msg: %s", data)
 
     def create_subscriber(self):
-        rospy.Subscriber('/cmd_vel', Twist, self.Callback)
+        rospy.Subscriber('/cmd_vel', Twist, self.Callback, queue_size=1, tcp_nodelay=True)
